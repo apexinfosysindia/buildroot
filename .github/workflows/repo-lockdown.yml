@@ -10,7 +10,7 @@ permissions:
 jobs:
   action:
     if: github.repository == 'buildroot/buildroot'
-    runs-on: [self-hosted, apexos-builder]
+    runs-on: [self-hosted, apexos-builder, linux, X64]
     steps:
       - uses: dessant/repo-lockdown@v4
         with:
