@@ -10,7 +10,7 @@ permissions:
 jobs:
   action:
     if: github.repository == 'buildroot/buildroot'
-    runs-on: [self-hosted, apexos-builder, linux, X64]
+    runs-on: ${{ fromJSON(vars.APEXOS_RUNSON_AMD64 || '["self-hosted","apexos-builder","linux","X64"]') }}
     steps:
       - uses: dessant/repo-lockdown@v4
         with:
